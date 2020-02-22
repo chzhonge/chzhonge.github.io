@@ -1,0 +1,17 @@
+server {
+  listen 443 ssl;
+  listen [::]:433 ssl;
+
+  root /var/www/public;
+
+  index index.html;
+
+  server_name chzlab.net;
+
+  location / {
+    try_files $uri $uri/ =404;
+  }
+
+  ssl_certificate /etc/letsencrypt/live/chzlab.net/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/chzlab.net/privkey.pem;
+}

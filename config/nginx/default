@@ -1,0 +1,10 @@
+server {
+  listen 80 default_servier;
+  listen [::]:80 default_server;
+
+  return 301 https://$host$requset_uri;
+
+  location ^~ /.well-known/acme-challenge/ {
+
+  }
+}
