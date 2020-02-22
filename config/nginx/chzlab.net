@@ -8,7 +8,7 @@ server {
 
   server_name chzlab.net;
 
-  location ~* \.(jpg|jpeg|png|css|js)$ {
+  location ~* \.(jpg|jpeg|png|css|js|webp)$ {
         expires 3d;
         access_log off;
         add_header Cache-Control "public";
