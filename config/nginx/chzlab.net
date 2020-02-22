@@ -8,6 +8,13 @@ server {
 
   server_name chzlab.net;
 
+  location ~* \.(jpg|jpeg|png|css|js)$ {
+        expires 3d;
+        access_log off;
+        add_header Cache-Control "public";
+  }
+
+
   location / {
     try_files $uri $uri/ =404;
   }
