@@ -14,12 +14,12 @@
 </script>
 <% } %>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" defer ></script>
 
 <% if (theme.fancybox){ %>
   <%- css('fancybox/jquery.fancybox') %>
   <%- js('fancybox/jquery.fancybox.pack') %>
 <% } %>
 
-<%- js('js/script') %>
+<%- js({ src: 'js/script.js', async: true  }) %>
 <%- partial('gauges-analytics') %>
