@@ -7,7 +7,7 @@ tags:
   - 網域
 ---
 
-以 chzlab.com domain 為例，來做相關比較，
+現在使用 chzlab.com domain 為範例，來做相關比較，
 最後選擇 Gandi + [Let's Encrypt](https://letsencrypt.org/) (免費SSL) 。
 因目前 Google Domain 台灣尚未開放購買，未來應該會換去 Google Domain 。
 
