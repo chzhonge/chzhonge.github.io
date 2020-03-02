@@ -88,6 +88,12 @@ markdown:
   render:
     html: true
 
+structured_data:
+  article:
+    eyecatch:
+      key: image
+      width: 1024
+      height: 768
 # https://github.com/bubkoo/hexo-toc
 toc:
   maxdepth: 3
