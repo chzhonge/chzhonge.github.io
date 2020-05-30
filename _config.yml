@@ -89,6 +89,12 @@ markdown:
     html: true
 
 structured_data:
+  label:
+    archive: Archive
+  logo:
+    path: favicon.ico
+    witdh: 150
+    height: 150
   article:
     eyecatch:
       key: image
