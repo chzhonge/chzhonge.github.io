@@ -7,6 +7,8 @@ tags:
     - Mac
 ---
 
+![composer](https://imgur.com/IEdAhDg.png "image.png")
+
 基本前提為環境需要有 [PHP](https://www.php.net/) ，
 
 後續按照 [Composer 安裝教學](https://getcomposer.org/download/) 步驟做。
