@@ -121,6 +121,8 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: landscape
 
+google_tag: GTM-M3TGH5N
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
