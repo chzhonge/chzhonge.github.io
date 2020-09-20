@@ -11,4 +11,6 @@ FROM staticfloat/nginx-certbot:latest
 COPY --from=build-env /app/public /app/chzlab.net
 
 ENV CERTBOT_EMAIL chzhonge@gmail.com
+
+COPY config/nginx/nginx.conf /etc/nginx/nginx.conf
 COPY config/nginx/chzlab.net-new /etc/nginx/conf.d/default.conf
