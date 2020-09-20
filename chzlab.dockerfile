@@ -4,7 +4,7 @@ COPY . /app
 
 WORKDIR /app
 
-RUN yarn install && npm run build
+RUN yarn install && npm run build && echo '# chzlab.net\nUser-agent: *' > /app/public/robots.txt
 
 FROM nginx:1.17.8-alpine
 
