@@ -26,7 +26,7 @@
 <meta property="og:description" content="原因#因為最近需要使用 python 作為 api 開發的環境，與團隊成員討論後，決定使用 flask web framework 框架，第一次使用，記錄相關的筆記。 套件管理 pip#pip 基本上可以當做 php 的 composer，相關的紀錄會在 requirements.txt 。 指令#如果有更動過套件，記得在專案下 pip freeze &gt; requirements.txt，把">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2021-01-22T06:00:00.000Z">
-<meta property="article:modified_time" content="2021-03-07T12:56:48.299Z">
+<meta property="article:modified_time" content="2021-03-07T13:14:19.775Z">
 <meta property="article:author" content="德瑞克">
 <meta property="article:tag" content="python">
 <meta property="article:tag" content="flask">
@@ -36,7 +36,7 @@
     <link rel="alternate" href="/atom.xml" title="德瑞克的實驗室" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.ico">
+    <link type="image/x-icon" rel="icon" href="/favicon.ico">
   
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
@@ -127,7 +127,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://chzlab.net/2021/01/22/python-flask-first-time/" data-id="cklz5tr53000598nihd52cvfw" class="article-share-link">Share</a>
+      <a data-url="https://chzlab.net/2021/01/22/python-flask-first-time/" data-id="cklz6gacc000592niet6m9s9r" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flask/" rel="tag">flask</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pip/" rel="tag">pip</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
@@ -149,7 +149,7 @@
   
 </article>
 
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","url":"https://chzlab.net/","logo":{"@type":"ImageObject","url":"favicon.ico","height":150}},{"@context":"http://schema.org","@type":"Person","name":"德瑞克","url":"https://chzlab.net/","sameAs":[]},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://chzlab.net/","name":"德瑞克的實驗室"}},{"@type":"ListItem","position":3,"item":{"@id":"https://chzlab.net/2021/01/22/python-flask-first-time/","name":"python flask 體驗"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"python flask 體驗","description":"","datePublished":"2021-01-22T06:00:00.000Z","dateModified":"2021-03-07T12:56:48.299Z","articleBody":"原因#因為最近需要使用 python 作為 api 開發的環境，與團隊成員討論後，決定使用 flask web framework 框架，第一次使用，記錄相關的筆記。\n套件管理 pip#pip 基本上可以當做 php 的 composer，相關的紀錄會在 requirements.txt 。\n指令#如果有更動過套件，記得在專案下 pip freeze > requirements.txt，把目前的套件記錄匯出來，避免套件不一致。\n\n這邊他也會把相依的套件記錄也一併輸出。\n\n安裝#12345678pip install flask// 指定版號pip install -v flask==1.0// 透過指定檔案安裝套件，通常都使用 requirements.txt 作為檔名pip install -r [檔案名稱]pip install -r requirements.txt\n建立套件清單#12pip freeze > [檔案名稱]pip freeze > requirements.txt\n\nflask#啟用 debug mode#設定 env FLASK_ENV 為 developmen，開啟同時也會啟用 hot reload，這樣變動檔案馬上就會更新。\n1export FLASK_ENV=development\n\nuwsgi#待續\ngunicorn#待續\n參考#官方文件\n","inLanguage":"zh-TW","mainEntityOfPage":{"@type":"WebPage","@id":"https://chzlab.net/2021/01/22/python-flask-first-time/"},"author":{"@type":"Person","name":"德瑞克"},"publisher":{"@type":"Organization","name":"德瑞克的實驗室","logo":{"@type":"ImageObject","url":"https://chzlab.net/favicon.ico","height":150}},"wordCount":596,"keywords":"python,flask,pip"}]</script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","url":"https://chzlab.net/","logo":{"@type":"ImageObject","url":"favicon.ico","height":150}},{"@context":"http://schema.org","@type":"Person","name":"德瑞克","url":"https://chzlab.net/","sameAs":[]},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://chzlab.net/","name":"德瑞克的實驗室"}},{"@type":"ListItem","position":3,"item":{"@id":"https://chzlab.net/2021/01/22/python-flask-first-time/","name":"python flask 體驗"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"python flask 體驗","description":"","datePublished":"2021-01-22T06:00:00.000Z","dateModified":"2021-03-07T13:14:19.775Z","articleBody":"原因#因為最近需要使用 python 作為 api 開發的環境，與團隊成員討論後，決定使用 flask web framework 框架，第一次使用，記錄相關的筆記。\n套件管理 pip#pip 基本上可以當做 php 的 composer，相關的紀錄會在 requirements.txt 。\n指令#如果有更動過套件，記得在專案下 pip freeze > requirements.txt，把目前的套件記錄匯出來，避免套件不一致。\n\n這邊他也會把相依的套件記錄也一併輸出。\n\n安裝#12345678pip install flask// 指定版號pip install -v flask==1.0// 透過指定檔案安裝套件，通常都使用 requirements.txt 作為檔名pip install -r [檔案名稱]pip install -r requirements.txt\n建立套件清單#12pip freeze > [檔案名稱]pip freeze > requirements.txt\n\nflask#啟用 debug mode#設定 env FLASK_ENV 為 developmen，開啟同時也會啟用 hot reload，這樣變動檔案馬上就會更新。\n1export FLASK_ENV=development\n\nuwsgi#待續\ngunicorn#待續\n參考#官方文件\n","inLanguage":"zh-TW","mainEntityOfPage":{"@type":"WebPage","@id":"https://chzlab.net/2021/01/22/python-flask-first-time/"},"author":{"@type":"Person","name":"德瑞克"},"publisher":{"@type":"Organization","name":"德瑞克的實驗室","logo":{"@type":"ImageObject","url":"https://chzlab.net/favicon.ico","height":150}},"wordCount":596,"keywords":"python,flask,pip"}]</script>
 
 </section>
         
