@@ -26,7 +26,7 @@
 <meta property="og:description" content="記錄 精通正規式表達式 相關的心得與筆記">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2020-02-28T11:09:58.000Z">
-<meta property="article:modified_time" content="2021-03-07T13:24:27.741Z">
+<meta property="article:modified_time" content="2021-03-13T14:22:12.859Z">
 <meta property="article:author" content="德瑞克">
 <meta property="article:tag" content="正規表達式">
 <meta property="article:tag" content="regex">
@@ -285,7 +285,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://chzlab.net/2020/02/28/book-regex-note/" data-id="cklz6tcyv0000jlob8iysamaw" class="article-share-link">Share</a>
+      <a data-url="https://chzlab.net/2020/02/28/book-regex-note/" data-id="ckm7tiose0000foni1zjjby3z" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/regex/" rel="tag">regex</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%AD%A3%E8%A6%8F%E5%BC%8F/" rel="tag">正規式</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E5%BC%8F/" rel="tag">正規表達式</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AD%86%E8%A8%98/" rel="tag">筆記</a></li></ul>
@@ -316,7 +316,7 @@
   
 </article>
 
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","url":"https://chzlab.net/","logo":{"@type":"ImageObject","url":"favicon.ico","height":150}},{"@context":"http://schema.org","@type":"Person","name":"德瑞克","url":"https://chzlab.net/","sameAs":[]},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://chzlab.net/","name":"德瑞克的實驗室"}},{"@type":"ListItem","position":3,"item":{"@id":"https://chzlab.net/2020/02/28/book-regex-note/","name":"正規表達式-基本概念"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"正規表達式-基本概念","description":"記錄 精通正規式表達式 相關的心得與筆記","datePublished":"2020-02-28T11:09:58.000Z","dateModified":"2021-03-07T13:24:27.741Z","articleBody":"記錄 精通正規式表達式 相關的心得與筆記\n\n\n\n\n\n\n詮釋字元\n名稱\n匹配內容\n\n\n\n.\n句點\n任何一個字元\n\n\n[…]\n字元類別(character class)\n任何一個列出的字元\n\n\n[^…]\n反轉字元類別\n任何一個沒有列出的字元\n\n\n^\n脫字號\n行首位置\n\n\n$\n錢號\n行尾位置\n\n\n＼\nor、或、bar\n匹配由它分隔的任一表達式\n\n\n()\n括號\n限制 | 範圍\n\n\n\\<\nword boundary\n單字開頭位置 (單詞邊界、metasequences、詮釋序列)\n\n\n\\>\nword boundary\n單字結束位置 (單詞邊界、metasequences、詮釋序列)\n\n\n特殊情境解釋：\n\n在 字元類別 狀況，要確認 使用的詮釋字元 在 字元類別 內是否有意義。\n\n字元類別只能在目標字串內匹配單一字元。\n\n\n123456- 情境    a[a-z] 字元類別內：有意義，表示範圍    a[-az] 字元類別內：無意義，因未放置在範圍間，僅會當成 - 號| 情境    a[a|b] 字元類別內：無意義，僅代表 | 號。\n\n量詞重複詮釋字元\n\n\n\n詮釋字元\n至少需要\n最多嘗試\n意義\n\n\n\n?\n無\n1\n允許一個;不必要(一個可省略)\n\n\n*\n無\n不限\n允許無限個;不必要(任何數量皆可))\n\n\n+\n1\n不限\n允許無限個;必要一個(至少一個))\n\n\n其他\n\n\n\n詮釋字元\n說明\n\n\n\n\\w\n表示 [a-zA-Z0-9_]\n\n\n\\d\n表示 [0-9]\n\n\n\\s\n匹配 空白字元 （空白、Tab、換行、換頁)\n\n\n|\n匹配它分隔的左右兩個表達式之一\n\n\n{下限, 上限}\n至少需要下限，最多允許上限\n\n\n(…)\n限制選項範圍、為量詞提供群組、捕捉參考\n\n\n\\1, \\2\n參考，匹配先前某組，括號之內匹配的內容\n\n\n(?:…)\n匹配，但不捕捉\n\n\n(?<name>…)\n給匹配對象群組設定 名稱\n\n\n旁觀比對\n\n旁觀比對，會檢查子表達式是否匹配，但不會取用任何匹配文字。只會找到文字內可以匹配的位置。目標為基準的左或右邊。\n\n\n\n\n詮釋字元\n說明\n\n\n\n\b(?=…)\nlookahead (往右旁觀比對)，往前看 右邊必須是\n\n\n(?!…)\nlookahead 不可為 …\n\n\n\b(?<=…)\nlookbehind (往左旁觀比對)，往後看  左邊必須是\n\n\n(?<!…)\nlookbehind 不可為 …\n\n\n1234567(?<=www\\.)xxx(?=\\.net)// 我要找 xxx// 它的左邊必須是 wwww\\.// 它的右邊必須是 \\.netwww.xxx.net\n\nRegExp 應用： lookahead , lookbehind - 無聊技術研究\n","inLanguage":"zh-TW","mainEntityOfPage":{"@type":"WebPage","@id":"https://chzlab.net/2020/02/28/book-regex-note/"},"author":{"@type":"Person","name":"德瑞克"},"publisher":{"@type":"Organization","name":"德瑞克的實驗室","logo":{"@type":"ImageObject","url":"https://chzlab.net/favicon.ico","height":150}},"wordCount":1137,"keywords":"正規表達式,regex,正規式,筆記"}]</script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","url":"https://chzlab.net/","logo":{"@type":"ImageObject","url":"favicon.ico","height":150}},{"@context":"http://schema.org","@type":"Person","name":"德瑞克","url":"https://chzlab.net/","sameAs":[]},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://chzlab.net/","name":"德瑞克的實驗室"}},{"@type":"ListItem","position":3,"item":{"@id":"https://chzlab.net/2020/02/28/book-regex-note/","name":"正規表達式-基本概念"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"正規表達式-基本概念","description":"記錄 精通正規式表達式 相關的心得與筆記","datePublished":"2020-02-28T11:09:58.000Z","dateModified":"2021-03-13T14:22:12.859Z","articleBody":"記錄 精通正規式表達式 相關的心得與筆記\n\n\n\n\n\n\n詮釋字元\n名稱\n匹配內容\n\n\n\n.\n句點\n任何一個字元\n\n\n[…]\n字元類別(character class)\n任何一個列出的字元\n\n\n[^…]\n反轉字元類別\n任何一個沒有列出的字元\n\n\n^\n脫字號\n行首位置\n\n\n$\n錢號\n行尾位置\n\n\n＼\nor、或、bar\n匹配由它分隔的任一表達式\n\n\n()\n括號\n限制 | 範圍\n\n\n\\<\nword boundary\n單字開頭位置 (單詞邊界、metasequences、詮釋序列)\n\n\n\\>\nword boundary\n單字結束位置 (單詞邊界、metasequences、詮釋序列)\n\n\n特殊情境解釋：\n\n在 字元類別 狀況，要確認 使用的詮釋字元 在 字元類別 內是否有意義。\n\n字元類別只能在目標字串內匹配單一字元。\n\n\n123456- 情境    a[a-z] 字元類別內：有意義，表示範圍    a[-az] 字元類別內：無意義，因未放置在範圍間，僅會當成 - 號| 情境    a[a|b] 字元類別內：無意義，僅代表 | 號。\n\n量詞重複詮釋字元\n\n\n\n詮釋字元\n至少需要\n最多嘗試\n意義\n\n\n\n?\n無\n1\n允許一個;不必要(一個可省略)\n\n\n*\n無\n不限\n允許無限個;不必要(任何數量皆可))\n\n\n+\n1\n不限\n允許無限個;必要一個(至少一個))\n\n\n其他\n\n\n\n詮釋字元\n說明\n\n\n\n\\w\n表示 [a-zA-Z0-9_]\n\n\n\\d\n表示 [0-9]\n\n\n\\s\n匹配 空白字元 （空白、Tab、換行、換頁)\n\n\n|\n匹配它分隔的左右兩個表達式之一\n\n\n{下限, 上限}\n至少需要下限，最多允許上限\n\n\n(…)\n限制選項範圍、為量詞提供群組、捕捉參考\n\n\n\\1, \\2\n參考，匹配先前某組，括號之內匹配的內容\n\n\n(?:…)\n匹配，但不捕捉\n\n\n(?<name>…)\n給匹配對象群組設定 名稱\n\n\n旁觀比對\n\n旁觀比對，會檢查子表達式是否匹配，但不會取用任何匹配文字。只會找到文字內可以匹配的位置。目標為基準的左或右邊。\n\n\n\n\n詮釋字元\n說明\n\n\n\n\b(?=…)\nlookahead (往右旁觀比對)，往前看 右邊必須是\n\n\n(?!…)\nlookahead 不可為 …\n\n\n\b(?<=…)\nlookbehind (往左旁觀比對)，往後看  左邊必須是\n\n\n(?<!…)\nlookbehind 不可為 …\n\n\n1234567(?<=www\\.)xxx(?=\\.net)// 我要找 xxx// 它的左邊必須是 wwww\\.// 它的右邊必須是 \\.netwww.xxx.net\n\nRegExp 應用： lookahead , lookbehind - 無聊技術研究\n","inLanguage":"zh-TW","mainEntityOfPage":{"@type":"WebPage","@id":"https://chzlab.net/2020/02/28/book-regex-note/"},"author":{"@type":"Person","name":"德瑞克"},"publisher":{"@type":"Organization","name":"德瑞克的實驗室","logo":{"@type":"ImageObject","url":"https://chzlab.net/favicon.ico","height":150}},"wordCount":1137,"keywords":"正規表達式,regex,正規式,筆記"}]</script>
 
 </section>
         
@@ -329,7 +329,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Composer/" rel="tag">Composer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Domain/" rel="tag">Domain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/" rel="tag">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/" rel="tag">PHP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flask/" rel="tag">flask</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pip/" rel="tag">pip</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/regex/" rel="tag">regex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BD%B1%E7%89%87/" rel="tag">影片</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E8%A6%8F%E5%BC%8F/" rel="tag">正規式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E5%BC%8F/" rel="tag">正規表達式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AD%86%E8%A8%98/" rel="tag">筆記</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%B6%B2%E5%9D%80/" rel="tag">網址</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%B6%B2%E5%9F%9F/" rel="tag">網域</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Composer/" rel="tag">Composer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Domain/" rel="tag">Domain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/" rel="tag">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/" rel="tag">PHP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flask/" rel="tag">flask</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pip/" rel="tag">pip</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/regex/" rel="tag">regex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BD%B1%E7%89%87/" rel="tag">影片</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E8%A6%8F%E5%BC%8F/" rel="tag">正規式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E5%BC%8F/" rel="tag">正規表達式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AD%86%E8%A8%98/" rel="tag">筆記</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%B6%B2%E5%9D%80/" rel="tag">網址</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%B6%B2%E5%9F%9F/" rel="tag">網域</a></li></ul>
     </div>
   </div>
 
@@ -339,7 +339,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤雲</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Composer/" style="font-size: 10px;">Composer</a> <a href="/tags/Domain/" style="font-size: 10px;">Domain</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/flask/" style="font-size: 10px;">flask</a> <a href="/tags/pip/" style="font-size: 10px;">pip</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/regex/" style="font-size: 10px;">regex</a> <a href="/tags/%E5%BD%B1%E7%89%87/" style="font-size: 10px;">影片</a> <a href="/tags/%E6%AD%A3%E8%A6%8F%E5%BC%8F/" style="font-size: 10px;">正規式</a> <a href="/tags/%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E5%BC%8F/" style="font-size: 10px;">正規表達式</a> <a href="/tags/%E7%AD%86%E8%A8%98/" style="font-size: 20px;">筆記</a> <a href="/tags/%E7%B6%B2%E5%9D%80/" style="font-size: 10px;">網址</a> <a href="/tags/%E7%B6%B2%E5%9F%9F/" style="font-size: 10px;">網域</a>
+      <a href="/tags/Composer/" style="font-size: 10px;">Composer</a> <a href="/tags/Domain/" style="font-size: 10px;">Domain</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/flask/" style="font-size: 10px;">flask</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/pip/" style="font-size: 10px;">pip</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/regex/" style="font-size: 10px;">regex</a> <a href="/tags/%E5%BD%B1%E7%89%87/" style="font-size: 10px;">影片</a> <a href="/tags/%E6%AD%A3%E8%A6%8F%E5%BC%8F/" style="font-size: 10px;">正規式</a> <a href="/tags/%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E5%BC%8F/" style="font-size: 10px;">正規表達式</a> <a href="/tags/%E7%AD%86%E8%A8%98/" style="font-size: 20px;">筆記</a> <a href="/tags/%E7%B6%B2%E5%9D%80/" style="font-size: 10px;">網址</a> <a href="/tags/%E7%B6%B2%E5%9F%9F/" style="font-size: 10px;">網域</a>
     </div>
   </div>
 
@@ -348,7 +348,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">彙整</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a></li></ul>
     </div>
   </div>
 
@@ -359,6 +359,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2021/03/13/hexo-deploy-to-github-static-page/">Hexo 部屬至　GitHub Page</a>
+          </li>
         
           <li>
             <a href="/2021/01/22/python-flask-first-time/">python flask 體驗</a>
@@ -374,10 +378,6 @@
         
           <li>
             <a href="/2020/02/22/mac-install-composer/">Mac安裝Composer</a>
-          </li>
-        
-          <li>
-            <a href="/2020/02/19/buy-domain/">Domain 網址 網域 購買筆記</a>
           </li>
         
       </ul>
