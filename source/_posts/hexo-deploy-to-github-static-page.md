@@ -6,7 +6,9 @@ tags:
   - github
 ---
 
+原本是架在 GCP 上，想說是個靜態頁面，乾脆就搬到 GitHub Page 上，做一下相關記錄。
 
+<!-- more -->
 ## 步驟
 1. 開　repo 命名為 {username}.github.io，如果已經有了，請把那個 repo 改名。
 
