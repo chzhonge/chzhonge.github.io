@@ -18,16 +18,16 @@
   
   <title>Hexo 部屬至　GitHub Page | 德瑞克的實驗室</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="步驟# 開　repo 命名為 {username}.github.io，如果已經有了，請把那個 repo 改名。  將專案下的 package.json ， 增加 scripts 區塊。 123456789101112&amp;#123;  &quot;scripts&quot;: &amp;#123;    &quot;build&quot;: &quot;hexo generate&quot;  &amp;#125;">
+  <meta name="description" content="原本是架在 GCP 上，想說是個靜態頁面，乾脆就搬到 GitHub Page 上，做一下相關記錄。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo 部屬至　GitHub Page">
 <meta property="og:url" content="https://chzlab.net/2021/03/13/hexo-deploy-to-github-static-page/">
 <meta property="og:site_name" content="德瑞克的實驗室">
-<meta property="og:description" content="步驟# 開　repo 命名為 {username}.github.io，如果已經有了，請把那個 repo 改名。  將專案下的 package.json ， 增加 scripts 區塊。 123456789101112&amp;#123;  &quot;scripts&quot;: &amp;#123;    &quot;build&quot;: &quot;hexo generate&quot;  &amp;#125;">
+<meta property="og:description" content="原本是架在 GCP 上，想說是個靜態頁面，乾脆就搬到 GitHub Page 上，做一下相關記錄。">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://imgur.com/t28QgJm.png">
 <meta property="article:published_time" content="2021-03-13T13:23:07.000Z">
-<meta property="article:modified_time" content="2021-03-13T14:22:12.859Z">
+<meta property="article:modified_time" content="2021-03-13T14:26:22.935Z">
 <meta property="article:author" content="德瑞克">
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="github">
@@ -109,7 +109,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2><span id="bu-zou">步驟</span><a href="#bu-zou" class="header-anchor">#</a></h2><ol>
+        <p>原本是架在 GCP 上，想說是個靜態頁面，乾脆就搬到 GitHub Page 上，做一下相關記錄。</p>
+<a id="more"></a>
+<h2><span id="bu-zou">步驟</span><a href="#bu-zou" class="header-anchor">#</a></h2><ol>
 <li><p>開　repo 命名為 {username}.github.io，如果已經有了，請把那個 repo 改名。</p>
 </li>
 <li><p>將專案下的 package.json ， 增加 scripts 區塊。</p>
@@ -148,7 +150,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://chzlab.net/2021/03/13/hexo-deploy-to-github-static-page/" data-id="ckm7tioso0004foni2qpl8dni" class="article-share-link">Share</a>
+      <a data-url="https://chzlab.net/2021/03/13/hexo-deploy-to-github-static-page/" data-id="ckm7to2jr0004giniant4fgku" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
@@ -170,7 +172,7 @@
   
 </article>
 
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","url":"https://chzlab.net/","logo":{"@type":"ImageObject","url":"favicon.ico","height":150}},{"@context":"http://schema.org","@type":"Person","name":"德瑞克","url":"https://chzlab.net/","sameAs":[]},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://chzlab.net/","name":"德瑞克的實驗室"}},{"@type":"ListItem","position":3,"item":{"@id":"https://chzlab.net/2021/03/13/hexo-deploy-to-github-static-page/","name":"Hexo 部屬至　GitHub Page"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hexo 部屬至　GitHub Page","description":"","datePublished":"2021-03-13T13:23:07.000Z","dateModified":"2021-03-13T14:22:12.859Z","articleBody":"步驟#\n開　repo 命名為 {username}.github.io，如果已經有了，請把那個 repo 改名。\n\n將專案下的 package.json ， 增加 scripts 區塊。\n123456789101112{  \"scripts\": {    \"build\": \"hexo generate\"  },  \"hexo\": {    \"version\": \"5.0.0\"  },  \"dependencies\": {    \"hexo\": \"^5.0.0\",    ...  }}\n\n開一個 source branch ，並 push 上去。\n\npublic 資料夾記得要在 .gitignore 增加\n\n1git push origin source\n\n建立 .github/workflows/pages.yml\n12345678910111213141516171819202122232425262728293031323334.github/workflows/pages.ymlname: Pageson:  push:    branches:      - source  # default branchjobs:  pages:    runs-on: ubuntu-latest    steps:      - uses: actions/checkout@v2      - name: Use Node.js 12.x        uses: actions/setup-node@v1        with:          node-version: '12.x'      - name: Cache NPM dependencies        uses: actions/cache@v2        with:          path: node_modules          key: ${{ runner.OS }}-npm-cache          restore-keys: |            ${{ runner.OS }}-npm-cache      - name: Install Dependencies        run: npm install      - name: Build        run: npm run build      - name: Deploy        uses: peaceiris/actions-gh-pages@v3        with:          github_token: ${{ secrets.GITHUB_TOKEN }}          publish_dir: ./public          publish_branch: master  # deploying branch\n\n進去 Github 的 repo 設定，設定 Source 相關參數https://github.com/{username}/{username}.github.io/settings\n\n\n\n\n如果有相關的 domain 設定，在 repo 的 source 下建立檔名為 CNAME 的檔案，內容為 購買的 domain\n\n基本上按照官方文件就可以 work。\n\n\n問題#\nhttps 憑證異常，記得設定 CNAME 檔案，重新 deploy 。\nfavicon.icon 無法正常顯示，剛開始幾秒 tab 上有正常顯示，網頁讀取完後就變成沒有 icon ，後來調整使用 .png 格式就正常，不過原來在 gcp 都正常。\n\n參考文件#\nConfiguring an apex domain\nGitHub Pages\nHexo绑定自定义域名\n如何使用 Hexo + Github Page 用 Cloudflare 綁定個人網址\n\n","inLanguage":"zh-TW","mainEntityOfPage":{"@type":"WebPage","@id":"https://chzlab.net/2021/03/13/hexo-deploy-to-github-static-page/"},"author":{"@type":"Person","name":"德瑞克"},"publisher":{"@type":"Organization","name":"德瑞克的實驗室","logo":{"@type":"ImageObject","url":"https://chzlab.net/favicon.ico","height":150}},"wordCount":1649,"keywords":"hexo,github","image":{"@type":"ImageObject","url":"https://imgur.com/t28QgJm.png","width":1024,"height":768}}]</script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","url":"https://chzlab.net/","logo":{"@type":"ImageObject","url":"favicon.ico","height":150}},{"@context":"http://schema.org","@type":"Person","name":"德瑞克","url":"https://chzlab.net/","sameAs":[]},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://chzlab.net/","name":"德瑞克的實驗室"}},{"@type":"ListItem","position":3,"item":{"@id":"https://chzlab.net/2021/03/13/hexo-deploy-to-github-static-page/","name":"Hexo 部屬至　GitHub Page"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hexo 部屬至　GitHub Page","description":"原本是架在 GCP 上，想說是個靜態頁面，乾脆就搬到 GitHub Page 上，做一下相關記錄。","datePublished":"2021-03-13T13:23:07.000Z","dateModified":"2021-03-13T14:26:22.935Z","articleBody":"原本是架在 GCP 上，想說是個靜態頁面，乾脆就搬到 GitHub Page 上，做一下相關記錄。\n\n步驟#\n開　repo 命名為 {username}.github.io，如果已經有了，請把那個 repo 改名。\n\n將專案下的 package.json ， 增加 scripts 區塊。\n123456789101112{  \"scripts\": {    \"build\": \"hexo generate\"  },  \"hexo\": {    \"version\": \"5.0.0\"  },  \"dependencies\": {    \"hexo\": \"^5.0.0\",    ...  }}\n\n開一個 source branch ，並 push 上去。\n\npublic 資料夾記得要在 .gitignore 增加\n\n1git push origin source\n\n建立 .github/workflows/pages.yml\n12345678910111213141516171819202122232425262728293031323334.github/workflows/pages.ymlname: Pageson:  push:    branches:      - source  # default branchjobs:  pages:    runs-on: ubuntu-latest    steps:      - uses: actions/checkout@v2      - name: Use Node.js 12.x        uses: actions/setup-node@v1        with:          node-version: '12.x'      - name: Cache NPM dependencies        uses: actions/cache@v2        with:          path: node_modules          key: ${{ runner.OS }}-npm-cache          restore-keys: |            ${{ runner.OS }}-npm-cache      - name: Install Dependencies        run: npm install      - name: Build        run: npm run build      - name: Deploy        uses: peaceiris/actions-gh-pages@v3        with:          github_token: ${{ secrets.GITHUB_TOKEN }}          publish_dir: ./public          publish_branch: master  # deploying branch\n\n進去 Github 的 repo 設定，設定 Source 相關參數https://github.com/{username}/{username}.github.io/settings\n\n\n\n\n如果有相關的 domain 設定，在 repo 的 source 下建立檔名為 CNAME 的檔案，內容為 購買的 domain\n\n基本上按照官方文件就可以 work。\n\n\n問題#\nhttps 憑證異常，記得設定 CNAME 檔案，重新 deploy 。\nfavicon.icon 無法正常顯示，剛開始幾秒 tab 上有正常顯示，網頁讀取完後就變成沒有 icon ，後來調整使用 .png 格式就正常，不過原來在 gcp 都正常。\n\n參考文件#\nConfiguring an apex domain\nGitHub Pages\nHexo绑定自定义域名\n如何使用 Hexo + Github Page 用 Cloudflare 綁定個人網址\n\n","inLanguage":"zh-TW","mainEntityOfPage":{"@type":"WebPage","@id":"https://chzlab.net/2021/03/13/hexo-deploy-to-github-static-page/"},"author":{"@type":"Person","name":"德瑞克"},"publisher":{"@type":"Organization","name":"德瑞克的實驗室","logo":{"@type":"ImageObject","url":"https://chzlab.net/favicon.ico","height":150}},"wordCount":1700,"keywords":"hexo,github","image":{"@type":"ImageObject","url":"https://imgur.com/t28QgJm.png","width":1024,"height":768}}]</script>
 
 </section>
         
