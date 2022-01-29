@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on 德瑞克的實驗室</title>
+    <link>https://chzlab.net/posts/</link>
+    <description>Recent content in Posts on 德瑞克的實驗室</description>
+    <image>
+      <url>https://chzlab.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://chzlab.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 29 Jan 2022 17:23:58 +0800</lastBuildDate><atom:link href="https://chzlab.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[2022-沒工作系列-01] Migrate Hexo to Hugo</title>
+      <link>https://chzlab.net/2022/01/29/2022-%E6%B2%92%E5%B7%A5%E4%BD%9C%E7%B3%BB%E5%88%97-01-migrate-hexo-to-hugo/</link>
+      <pubDate>Sat, 29 Jan 2022 17:23:58 +0800</pubDate>
+      
+      <guid>https://chzlab.net/2022/01/29/2022-%E6%B2%92%E5%B7%A5%E4%BD%9C%E7%B3%BB%E5%88%97-01-migrate-hexo-to-hugo/</guid>
+      <description>原因 原本是用 Hexo ， 因會在 windows、 linux 下切換開發，有時 node 在 windows terminal 會有些詭異問題發生， 決定換成 golang 的 Hugo ，省的麻煩。
+windows 安裝 Hugo Hugo 官方文件
+可以使用在 win 上面的套件管理器 Chocolatey 或 Scoop ，差異似乎是在權限以及相依性，有點不太一樣，沒有細看。 有興趣可以參考
+Scoop or Chocolatey? Which Windows 10 package manager should you use?
+後來我選了 Scoop ，剛裝完可以用，當我把 terminal 關掉重開就又壞了&amp;hellip;&amp;hellip;
+為了省事直接使用第三個方案，從 Hugo Github 直接裝執行檔來用，安裝位置就看個人習慣， 裝完記得在 path 裡面把路徑設定進去，因為在 win 的環境下習慣用 git bash ，所以我是這樣設定。
+# .bashrc PATH=$PATH:/c/work/tools/ 如果要用 win 內建的話，就直接在環境變數 path 裡面加。
+最後 terminal 下輸入 hugo ，正常執行。</description>
+    </item>
+    
+    <item>
+      <title>Hexo 部屬至　GitHub Page</title>
+      <link>https://chzlab.net/2021/03/13/hexo-%E9%83%A8%E5%B1%AC%E8%87%B3-github-page/</link>
+      <pubDate>Sat, 13 Mar 2021 21:23:07 +0000</pubDate>
+      
+      <guid>https://chzlab.net/2021/03/13/hexo-%E9%83%A8%E5%B1%AC%E8%87%B3-github-page/</guid>
+      <description>原本是架在 GCP 上，想說是個靜態頁面，乾脆就搬到 GitHub Page 上，做一下相關記錄。
+步驟   開　repo 命名為 {username}.github.io，如果已經有了，請把那個 repo 改名。
+  將專案下的 package.json ， 增加 scripts 區塊。
+  { &amp;quot;scripts&amp;quot;: { &amp;quot;build&amp;quot;: &amp;quot;hexo generate&amp;quot; }, &amp;quot;hexo&amp;quot;: { &amp;quot;version&amp;quot;: &amp;quot;5.0.0&amp;quot; }, &amp;quot;dependencies&amp;quot;: { &amp;quot;hexo&amp;quot;: &amp;quot;^5.0.0&amp;quot;, ... } } 開一個 source branch ，並 push 上去。   public 資料夾記得要在 .gitignore 增加
+ git push origin source 建立 .github/workflows/pages.yml  .github/workflows/pages.yml name: Pages on: push: branches: - source # default branch jobs: pages: runs-on: ubuntu-latest steps: - uses: actions/checkout@v2 - name: Use Node.</description>
+    </item>
+    
+    <item>
+      <title>python flask 體驗</title>
+      <link>https://chzlab.net/2021/01/22/python-flask-%E9%AB%94%E9%A9%97/</link>
+      <pubDate>Fri, 22 Jan 2021 14:00:00 +0000</pubDate>
+      
+      <guid>https://chzlab.net/2021/01/22/python-flask-%E9%AB%94%E9%A9%97/</guid>
+      <description>原因 因為最近需要使用 python 作為 api 開發的環境，與團隊成員討論後，決定使用 flask web framework 框架，第一次使用，記錄相關的筆記。
+套件管理 pip pip 基本上可以當做 php 的 composer， 相關的紀錄會在 requirements.txt 。
+指令 如果有更動過套件，記得在專案下 pip freeze &amp;gt; requirements.txt，把目前的套件記錄匯出來，避免套件不一致。
+ 這邊他也會把相依的套件記錄也一併輸出。
+ 安裝 pip install flask // 指定版號 pip install -v flask==1.0 // 透過指定檔案安裝套件，通常都使用 requirements.txt 作為檔名 pip install -r [檔案名稱] pip install -r requirements.txt 建立套件清單 pip freeze &amp;gt; [檔案名稱] pip freeze &amp;gt; requirements.txt flask 啟用 debug mode 設定 env FLASK_ENV 為 developmen，開啟同時也會啟用 hot reload，這樣變動檔案馬上就會更新。</description>
+    </item>
+    
+    <item>
+      <title>一學就會的拍片課摘錄筆記</title>
+      <link>https://chzlab.net/2020/03/24/%E4%B8%80%E5%AD%B8%E5%B0%B1%E6%9C%83%E7%9A%84%E6%8B%8D%E7%89%87%E8%AA%B2%E6%91%98%E9%8C%84%E7%AD%86%E8%A8%98/</link>
+      <pubDate>Tue, 24 Mar 2020 20:51:14 +0000</pubDate>
+      
+      <guid>https://chzlab.net/2020/03/24/%E4%B8%80%E5%AD%B8%E5%B0%B1%E6%9C%83%E7%9A%84%E6%8B%8D%E7%89%87%E8%AA%B2%E6%91%98%E9%8C%84%E7%AD%86%E8%A8%98/</guid>
+      <description>基本上手指南  用鏡頭思考  目標是誰？ 在做什麼？ 有不有趣？   不有趣，停下。找有趣內容拍攝，避免浪費時間處理不可用鏡頭或片段。
+     2. 看到眼白再拍攝 &amp;gt; 人的面部表情可作為鏡頭焦點。 3. 鏡頭時間 * 時間建議不要超過 10 秒。 * 短鏡頭讓影片更具衝擊性。 4. 拍攝 * 用腳變焦，自行靠近主體。 * 使用腳架。 * 別用 「數位變焦」。 5. 站穩！別亂動 * 拍攝時不變焦。 * 攝影機當相機。 * 確認畫面 =&amp;gt; 按下開始 =&amp;gt; 拍攝 =&amp;gt; 停止。 * 移動 =&amp;gt; 對準 =&amp;gt; 拍攝 =&amp;gt; 停止，循環。 6. 光源保持在後，保持明亮 &amp;gt; 光線過強，讓陽光斜照，避免過亮。 7. 關閉數位特效 &amp;gt; 保留彈性，加工透過後製。 8. 專注於真正感興趣的內容 * 想要表達的重點。 * 神情、動作、雙方的反應。 * 原因、過程、結果。 9.</description>
+    </item>
+    
+    <item>
+      <title>正規表達式-基本概念</title>
+      <link>https://chzlab.net/2020/02/28/%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E5%BC%8F-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
+      <pubDate>Fri, 28 Feb 2020 19:09:58 +0000</pubDate>
+      
+      <guid>https://chzlab.net/2020/02/28/%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E5%BC%8F-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
+      <description>記錄 精通正規式表達式 相關的心得與筆記
+   詮釋字元 名稱 匹配內容     . 句點 任何一個字元   [&amp;hellip;] 字元類別(character class) 任何一個列出的字元   [^&amp;hellip;] 反轉字元類別 任何一個沒有列出的字元   ^ 脫字號 行首位置   $ 錢號 行尾位置   ＼ or、或、bar 匹配由它分隔的任一表達式   () 括號 限制 | 範圍   \&amp;lt; word boundary 單字開頭位置 (單詞邊界、metasequences、詮釋序列)   \&amp;gt; word boundary 單字結束位置 (單詞邊界、metasequences、詮釋序列)    特殊情境解釋：
+  在 字元類別 狀況，要確認 使用的詮釋字元 在 字元類別 內是否有意義。</description>
+    </item>
+    
+    <item>
+      <title>Mac安裝Composer</title>
+      <link>https://chzlab.net/2020/02/22/mac%E5%AE%89%E8%A3%9Dcomposer/</link>
+      <pubDate>Sat, 22 Feb 2020 23:48:39 +0000</pubDate>
+      
+      <guid>https://chzlab.net/2020/02/22/mac%E5%AE%89%E8%A3%9Dcomposer/</guid>
+      <description>基本前提為環境需要有 PHP ，
+後續按照 Composer 安裝教學 步驟做。
+php -r &amp;#34;copy(&amp;#39;https://getcomposer.org/installer&amp;#39;, &amp;#39;composer-setup.php&amp;#39;);&amp;#34; php -r &amp;#34;if (hash_file(&amp;#39;sha384&amp;#39;, &amp;#39;composer-setup.php&amp;#39;) === &amp;#39;e0012edf3e80b6978849f5eff0d4b4e4c79ff1609dd1e613307e16318854d24ae64f26d17af3ef0bf7cfb710ca74755a&amp;#39;) { echo &amp;#39;Installer verified&amp;#39;; } else { echo &amp;#39;Installer corrupt&amp;#39;; unlink(&amp;#39;composer-setup.php&amp;#39;); } echo PHP_EOL;&amp;#34; php composer-setup.php php -r &amp;#34;unlink(&amp;#39;composer-setup.php&amp;#39;);&amp;#34; 此時在執行指令的位置，會出現以下檔案
+composer.phar 測試執行 composer.phar
+composer.phar // 顯示 ______ / ____/___ ____ ___ ____ ____ ________ _____ / / / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/ / /___/ /_/ / / / / / / /_/ / /_/ (__ ) __/ / \____/\____/_/ /_/ /_/ .</description>
+    </item>
+    
+    <item>
+      <title>Domain 網址 網域 購買筆記</title>
+      <link>https://chzlab.net/2020/02/19/domain-%E7%B6%B2%E5%9D%80-%E7%B6%B2%E5%9F%9F-%E8%B3%BC%E8%B2%B7%E7%AD%86%E8%A8%98/</link>
+      <pubDate>Wed, 19 Feb 2020 13:35:02 +0000</pubDate>
+      
+      <guid>https://chzlab.net/2020/02/19/domain-%E7%B6%B2%E5%9D%80-%E7%B6%B2%E5%9F%9F-%E8%B3%BC%E8%B2%B7%E7%AD%86%E8%A8%98/</guid>
+      <description>現在使用 chzlab.com domain 為範例，來做相關比較，
+最後選擇 Gandi + Let&amp;rsquo;s Encrypt (免費SSL) 。 因目前 Google Domain 台灣尚未開放購買，未來應該會換去 Google Domain 。
+   廠商 價格 WHOIS Privacy SSL     Google Domain $361 免費 連結   Gandi $446 免費 連結   Godaddy $299 額外付費 ($293) 連結   中華電信 $720 未知 連結   name $270 首年免費，後續每年($150) 連結    美金匯率以 2020-02-19 13:35 : 30.16 做計算，上述列皆已轉換成新台幣價格。 </description>
+    </item>
+    
+  </channel>
+</rss>

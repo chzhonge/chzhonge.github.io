@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>github on 德瑞克的實驗室</title>
+    <link>https://chzlab.net/tags/github/</link>
+    <description>Recent content in github on 德瑞克的實驗室</description>
+    <image>
+      <url>https://chzlab.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://chzlab.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 13 Mar 2021 21:23:07 +0000</lastBuildDate><atom:link href="https://chzlab.net/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hexo 部屬至　GitHub Page</title>
+      <link>https://chzlab.net/2021/03/13/hexo-%E9%83%A8%E5%B1%AC%E8%87%B3-github-page/</link>
+      <pubDate>Sat, 13 Mar 2021 21:23:07 +0000</pubDate>
+      
+      <guid>https://chzlab.net/2021/03/13/hexo-%E9%83%A8%E5%B1%AC%E8%87%B3-github-page/</guid>
+      <description>原本是架在 GCP 上，想說是個靜態頁面，乾脆就搬到 GitHub Page 上，做一下相關記錄。
+步驟   開　repo 命名為 {username}.github.io，如果已經有了，請把那個 repo 改名。
+  將專案下的 package.json ， 增加 scripts 區塊。
+  { &amp;quot;scripts&amp;quot;: { &amp;quot;build&amp;quot;: &amp;quot;hexo generate&amp;quot; }, &amp;quot;hexo&amp;quot;: { &amp;quot;version&amp;quot;: &amp;quot;5.0.0&amp;quot; }, &amp;quot;dependencies&amp;quot;: { &amp;quot;hexo&amp;quot;: &amp;quot;^5.0.0&amp;quot;, ... } } 開一個 source branch ，並 push 上去。   public 資料夾記得要在 .gitignore 增加
+ git push origin source 建立 .github/workflows/pages.yml  .github/workflows/pages.yml name: Pages on: push: branches: - source # default branch jobs: pages: runs-on: ubuntu-latest steps: - uses: actions/checkout@v2 - name: Use Node.</description>
+    </item>
+    
+  </channel>
+</rss>

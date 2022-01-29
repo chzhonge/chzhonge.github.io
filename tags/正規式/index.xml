@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>正規式 on 德瑞克的實驗室</title>
+    <link>https://chzlab.net/tags/%E6%AD%A3%E8%A6%8F%E5%BC%8F/</link>
+    <description>Recent content in 正規式 on 德瑞克的實驗室</description>
+    <image>
+      <url>https://chzlab.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://chzlab.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 28 Feb 2020 19:09:58 +0000</lastBuildDate><atom:link href="https://chzlab.net/tags/%E6%AD%A3%E8%A6%8F%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>正規表達式-基本概念</title>
+      <link>https://chzlab.net/2020/02/28/%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E5%BC%8F-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
+      <pubDate>Fri, 28 Feb 2020 19:09:58 +0000</pubDate>
+      
+      <guid>https://chzlab.net/2020/02/28/%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E5%BC%8F-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
+      <description>記錄 精通正規式表達式 相關的心得與筆記
+   詮釋字元 名稱 匹配內容     . 句點 任何一個字元   [&amp;hellip;] 字元類別(character class) 任何一個列出的字元   [^&amp;hellip;] 反轉字元類別 任何一個沒有列出的字元   ^ 脫字號 行首位置   $ 錢號 行尾位置   ＼ or、或、bar 匹配由它分隔的任一表達式   () 括號 限制 | 範圍   \&amp;lt; word boundary 單字開頭位置 (單詞邊界、metasequences、詮釋序列)   \&amp;gt; word boundary 單字結束位置 (單詞邊界、metasequences、詮釋序列)    特殊情境解釋：
+  在 字元類別 狀況，要確認 使用的詮釋字元 在 字元類別 內是否有意義。</description>
+    </item>
+    
+  </channel>
+</rss>
