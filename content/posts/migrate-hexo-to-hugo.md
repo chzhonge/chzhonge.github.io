@@ -114,8 +114,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          # publish_branch: 要推到哪一個 br
-          # 會影響到後面的 GitHub Page 設定，沒設定預設是 gh-pages ，這邊我沒有設定，讓他走預設 br
+          publish_branch: master # 要推到哪一個 br 會影響到後面的 GitHub Page 設定，沒設定預設是 gh-pages
 ```
 
 參考文件
@@ -124,7 +123,7 @@ jobs:
 
 ### 設定 Pages
 1. 到 https://github.com/{user_name}/{repo_name}/settings/pages 設定
-    - source br: gh-pages
+    - source br: master
     - 資料夾： /root
 
 2. 有買 domain 的話，設定 custom domain。
