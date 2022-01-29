@@ -52,6 +52,10 @@ params:
     icon: /favicon.png
     iconHeight: 35
 
+  homeInfoParams:
+      Title: Hi 我是 Deric
+      Content: 就是個 BLOG
+
   # profile-mode
   profileMode:
     enabled: false # needs to be explicitly set
@@ -69,7 +73,7 @@ params:
 
   socialIcons:
     - name: github
-      url: "https://github.com/"
+      url: "https://github.com/chzhonge"
 
   analytics:
     google:
