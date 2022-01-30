@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://chzlab.net/2022/01/30/2022-%E6%B2%92%E5%B7%A5%E4%BD%9C%E7%B3%BB%E5%88%97-03-hugo-papermod-%E4%B8%BB%E9%A1%8C%E5%AE%89%E8%A3%9D-disqus/</loc>
+    <lastmod>2022-01-30T23:23:41+08:00</lastmod>
+  </url><url>
+    <loc>https://chzlab.net/tags/disqus/</loc>
+    <lastmod>2022-01-30T23:23:41+08:00</lastmod>
+  </url><url>
+    <loc>https://chzlab.net/tags/golang/</loc>
+    <lastmod>2022-01-30T23:23:41+08:00</lastmod>
+  </url><url>
+    <loc>https://chzlab.net/tags/hugo/</loc>
+    <lastmod>2022-01-30T23:23:41+08:00</lastmod>
+  </url><url>
+    <loc>https://chzlab.net/tags/papermod/</loc>
+    <lastmod>2022-01-30T23:23:41+08:00</lastmod>
+  </url><url>
+    <loc>https://chzlab.net/posts/</loc>
+    <lastmod>2022-01-30T23:23:41+08:00</lastmod>
+  </url><url>
+    <loc>https://chzlab.net/tags/</loc>
+    <lastmod>2022-01-30T23:23:41+08:00</lastmod>
+  </url><url>
+    <loc>https://chzlab.net/tags/wip/</loc>
+    <lastmod>2022-01-30T23:23:41+08:00</lastmod>
+  </url><url>
+    <loc>https://chzlab.net/</loc>
+    <lastmod>2022-01-30T23:23:41+08:00</lastmod>
+  </url><url>
     <loc>https://chzlab.net/tags/2022%E6%B2%92%E5%B7%A5%E4%BD%9C%E7%B3%BB%E5%88%97/</loc>
     <lastmod>2022-01-30T21:10:37+08:00</lastmod>
   </url><url>
@@ -14,18 +41,6 @@
     <loc>https://chzlab.net/tags/flag/</loc>
     <lastmod>2022-01-30T21:10:37+08:00</lastmod>
   </url><url>
-    <loc>https://chzlab.net/tags/golang/</loc>
-    <lastmod>2022-01-30T21:10:37+08:00</lastmod>
-  </url><url>
-    <loc>https://chzlab.net/posts/</loc>
-    <lastmod>2022-01-30T21:10:37+08:00</lastmod>
-  </url><url>
-    <loc>https://chzlab.net/tags/</loc>
-    <lastmod>2022-01-30T21:10:37+08:00</lastmod>
-  </url><url>
-    <loc>https://chzlab.net/</loc>
-    <lastmod>2022-01-30T21:10:37+08:00</lastmod>
-  </url><url>
     <loc>https://chzlab.net/2022/01/29/2022-%E6%B2%92%E5%B7%A5%E4%BD%9C%E7%B3%BB%E5%88%97-01-migrate-hexo-to-hugo/</loc>
     <lastmod>2022-01-29T17:23:58+08:00</lastmod>
   </url><url>
@@ -33,9 +48,6 @@
     <lastmod>2022-01-29T17:23:58+08:00</lastmod>
   </url><url>
     <loc>https://chzlab.net/tags/hexo/</loc>
-    <lastmod>2022-01-29T17:23:58+08:00</lastmod>
-  </url><url>
-    <loc>https://chzlab.net/tags/hugo/</loc>
     <lastmod>2022-01-29T17:23:58+08:00</lastmod>
   </url><url>
     <loc>https://chzlab.net/tags/github/</loc>

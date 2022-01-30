@@ -3,7 +3,7 @@
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <meta name=robots content="index, follow">
-<title>golang | 德瑞克的實驗室</title>
+<title>Golang | 德瑞克的實驗室</title>
 <meta name=keywords content>
 <meta name=description content="德瑞克雜記。">
 <meta name=author content="Me">
@@ -24,13 +24,13 @@
 <style>#theme-toggle,.top-link{display:none}</style>
 <style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
 </noscript>
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-123-45','auto'),ga('send','pageview'))</script><meta property="og:title" content="golang">
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-123-45','auto'),ga('send','pageview'))</script><meta property="og:title" content="Golang">
 <meta property="og:description" content="德瑞克雜記。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://chzlab.net/tags/golang/"><meta property="og:image" content="https://chzlab.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta property="og:site_name" content="Deric's BLOG">
 <meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://chzlab.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E">
-<meta name=twitter:title content="golang">
+<meta name=twitter:title content="Golang">
 <meta name=twitter:description content="德瑞克雜記。">
 </head>
 <body class=list id=top>
@@ -61,8 +61,20 @@
 </header>
 <main class=main>
 <header class=page-header><div class=breadcrumbs><a href=https://chzlab.net/>Home</a>&nbsp;»&nbsp;<a href=https://chzlab.net/tags/>Tags</a></div>
-<h1>golang</h1>
+<h1>Golang</h1>
 </header>
+<article class="post-entry tag-entry">
+<header class=entry-header>
+<h2>[2022-沒工作系列-03] Hugo PaperMod 主題安裝 Disqus
+</h2>
+</header>
+<section class=entry-content>
+<p>註冊 Disqus 進入 Disqus 註冊，基本上按步驟做，列出幾個比較重要的。 Select plan 選擇 Basic 方案 Select Platform 選擇手動安裝 會出現兩份要放入的 html ，用途應該分別為 comment 以及 count 後續把設定完成。 在 Hugo PaperMod 主題設定 因每個主題針對 comment 的設定可能不一樣，這以我用的 PaperMod 為例
+調整專案根目錄下的 config.yml 新增 disqus 設定， shortname 按照在 disqus 的設定 在 params 下，調整 comments 為 true // 這邊 disqus: enable: true shortname: chzlab-net count: true // 到這邊 params: title: Deric's BLOG // 略 comments: true // 多這 在專案根目錄下建立資料夾 layouts 在 layouts 資料夾下 建立 partials 資料夾 從專案根目錄下的 /themes/PaperMod/layouts/partials/comments....</p>
+</section>
+<footer class=entry-footer><span title="2022-01-30 23:23:41 +0800 +0800">January 30, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to [2022-沒工作系列-03] Hugo PaperMod 主題安裝 Disqus" href=https://chzlab.net/2022/01/30/2022-%E6%B2%92%E5%B7%A5%E4%BD%9C%E7%B3%BB%E5%88%97-03-hugo-papermod-%E4%B8%BB%E9%A1%8C%E5%AE%89%E8%A3%9D-disqus/></a>
+</article>
 <article class="post-entry tag-entry">
 <header class=entry-header>
 <h2>[2022-沒工作系列-02] Golang Command 入門

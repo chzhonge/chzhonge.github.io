@@ -9,7 +9,17 @@
       <link>https://chzlab.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 30 Jan 2022 21:10:37 +0800</lastBuildDate><atom:link href="https://chzlab.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Jan 2022 23:23:41 +0800</lastBuildDate><atom:link href="https://chzlab.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[2022-沒工作系列-03] Hugo PaperMod 主題安裝 Disqus</title>
+      <link>https://chzlab.net/2022/01/30/2022-%E6%B2%92%E5%B7%A5%E4%BD%9C%E7%B3%BB%E5%88%97-03-hugo-papermod-%E4%B8%BB%E9%A1%8C%E5%AE%89%E8%A3%9D-disqus/</link>
+      <pubDate>Sun, 30 Jan 2022 23:23:41 +0800</pubDate>
+      
+      <guid>https://chzlab.net/2022/01/30/2022-%E6%B2%92%E5%B7%A5%E4%BD%9C%E7%B3%BB%E5%88%97-03-hugo-papermod-%E4%B8%BB%E9%A1%8C%E5%AE%89%E8%A3%9D-disqus/</guid>
+      <description>註冊 Disqus  進入 Disqus 註冊，基本上按步驟做，列出幾個比較重要的。 Select plan 選擇 Basic 方案 Select Platform 選擇手動安裝 會出現兩份要放入的 html ，用途應該分別為 comment 以及 count 後續把設定完成。  在 Hugo PaperMod 主題設定 因每個主題針對 comment 的設定可能不一樣，這以我用的 PaperMod 為例
+ 調整專案根目錄下的 config.yml  新增 disqus 設定， shortname 按照在 disqus 的設定 在 params 下，調整 comments 為 true    // 這邊 disqus: enable: true shortname: chzlab-net count: true // 到這邊 params: title: Deric&#39;s BLOG // 略 comments: true // 多這 在專案根目錄下建立資料夾 layouts 在 layouts 資料夾下 建立 partials 資料夾 從專案根目錄下的 /themes/PaperMod/layouts/partials/comments.</description>
+    </item>
+    
     <item>
       <title>[2022-沒工作系列-02] Golang Command 入門</title>
       <link>https://chzlab.net/2022/01/30/2022-%E6%B2%92%E5%B7%A5%E4%BD%9C%E7%B3%BB%E5%88%97-02-golang-command-%E5%85%A5%E9%96%80/</link>
