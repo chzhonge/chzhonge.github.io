@@ -110,3 +110,8 @@ layouts
 8. 確認本機有出現 comment 區塊
 
 9. 部屬到正式機，確認可以正常留言
+
+## 參考文件
+- [Hugo 安裝 Disqus 留言板](https://dizang.io/posts/hugo-install-disqus/)
+- [【Day 8】如何安裝 Disqus 留言板](https://ithelp.ithome.com.tw/articles/10242269)
+- [Hexo 集成 Disqus 评论](https://www.cylong.com/blog/2017/03/26/hexo-next-disqus/)
