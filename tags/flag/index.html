@@ -70,7 +70,7 @@
 </header>
 <section class=entry-content>
 <p>基本用法 目前練習先使用 flag package
-func init() { flag.StringVar(&sourceFolder, "s", "", "source folder path [required]") // 設定要吃的參數，使用有帶 Var func 會把值存到 第一個參數中 // output -s [path] flag.Usage = usage // 執行沒帶參數 或帶 --help / -h 會顯示的提示訊息 } func usage() { fmt.Fprintln(os.Stderr, "Usage: parse [options]") flag.PrintDefaults() // 透過 flag 設定的參數說明都印出來 } 參考文件 Can command line flags in Go be set to mandatory? Go by Example: Command-Line Subcommands Golang 官方文件 flag 其他套件 go-flags cobra </p>
+func init() { flag.StringVar(&sourceFolder, "s", "", "source folder path [required]") // 設定要吃的參數，使用有帶 Var func 會把值存到 第一個參數中 // output -s [path] flag.Usage = usage // 執行沒帶參數 或帶 --help / -h 會顯示的提示訊息 } func usage() { fmt.Fprintln(os.Stderr, "Usage: parse [options]") flag.PrintDefaults() // 透過 flag 設定的參數說明都印出來 } 參考文件 Can command line flags in Go be set to mandatory? Go by Example: Command-Line Subcommands Golang 官方文件 flag 【Golang】如何讀取 command-line argument/flag？必知的幾種用法！ 其他套件 go-flags cobra </p>
 </section>
 <footer class=entry-footer><span title="2022-01-30 21:10:37 +0800 +0800">January 30, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to [2022-沒工作系列-02] Golang Command 入門" href=https://chzlab.net/2022/01/30/2022-%E6%B2%92%E5%B7%A5%E4%BD%9C%E7%B3%BB%E5%88%97-02-golang-command-%E5%85%A5%E9%96%80/></a>

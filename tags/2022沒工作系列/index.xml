@@ -17,7 +17,7 @@
       
       <guid>https://chzlab.net/2022/01/30/2022-%E6%B2%92%E5%B7%A5%E4%BD%9C%E7%B3%BB%E5%88%97-02-golang-command-%E5%85%A5%E9%96%80/</guid>
       <description>基本用法 目前練習先使用 flag package
-func init() { flag.StringVar(&amp;amp;sourceFolder, &amp;#34;s&amp;#34;, &amp;#34;&amp;#34;, &amp;#34;source folder path [required]&amp;#34;) // 設定要吃的參數，使用有帶 Var func 會把值存到 第一個參數中  // output -s [path]  flag.Usage = usage // 執行沒帶參數 或帶 --help / -h 會顯示的提示訊息 } func usage() { fmt.Fprintln(os.Stderr, &amp;#34;Usage: parse [options]&amp;#34;) flag.PrintDefaults() // 透過 flag 設定的參數說明都印出來 } 參考文件  Can command line flags in Go be set to mandatory? Go by Example: Command-Line Subcommands Golang 官方文件 flag  其他套件  go-flags cobra  </description>
+func init() { flag.StringVar(&amp;amp;sourceFolder, &amp;#34;s&amp;#34;, &amp;#34;&amp;#34;, &amp;#34;source folder path [required]&amp;#34;) // 設定要吃的參數，使用有帶 Var func 會把值存到 第一個參數中  // output -s [path]  flag.Usage = usage // 執行沒帶參數 或帶 --help / -h 會顯示的提示訊息 } func usage() { fmt.Fprintln(os.Stderr, &amp;#34;Usage: parse [options]&amp;#34;) flag.PrintDefaults() // 透過 flag 設定的參數說明都印出來 } 參考文件  Can command line flags in Go be set to mandatory? Go by Example: Command-Line Subcommands Golang 官方文件 flag 【Golang】如何讀取 command-line argument/flag？必知的幾種用法！  其他套件  go-flags cobra  </description>
     </item>
     
     <item>
