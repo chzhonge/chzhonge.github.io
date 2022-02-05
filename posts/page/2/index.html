@@ -71,6 +71,21 @@
 </header>
 <article class=post-entry>
 <header class=entry-header>
+<h2>Hexo 部屬至　GitHub Page
+</h2>
+</header>
+<section class=entry-content>
+<p>原本是架在 GCP 上，想說是個靜態頁面，乾脆就搬到 GitHub Page 上，做一下相關記錄。
+步驟 開　repo 命名為 {username}.github.io，如果已經有了，請把那個 repo 改名。
+將專案下的 package.json ， 增加 scripts 區塊。
+{ "scripts": { "build": "hexo generate" }, "hexo": { "version": "5.0.0" }, "dependencies": { "hexo": "^5.0.0", ... } } 開一個 source branch ，並 push 上去。 public 資料夾記得要在 .gitignore 增加
+git push origin source 建立 .github/workflows/pages.yml .github/workflows/pages.yml name: Pages on: push: branches: - source # default branch jobs: pages: runs-on: ubuntu-latest steps: - uses: actions/checkout@v2 - name: Use Node....</p>
+</section>
+<footer class=entry-footer><span title="2021-03-13 21:23:07 +0000 UTC">March 13, 2021</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to Hexo 部屬至　GitHub Page" href=https://chzlab.net/2021/03/13/hexo-%E9%83%A8%E5%B1%AC%E8%87%B3-github-page/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>python flask 體驗
 </h2>
 </header>
@@ -124,22 +139,10 @@ composer.phar // 顯示 ______ / ____/___ ____ ___ ____ ____ ________ _____ / / 
 <footer class=entry-footer><span title="2020-02-22 23:48:39 +0000 UTC">February 22, 2020</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to Mac安裝Composer" href=https://chzlab.net/2020/02/22/mac%E5%AE%89%E8%A3%9Dcomposer/></a>
 </article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>Domain 網址 網域 購買筆記
-</h2>
-</header>
-<section class=entry-content>
-<p>現在使用 chzlab.com domain 為範例，來做相關比較，
-最後選擇 Gandi + Let’s Encrypt (免費SSL) 。 因目前 Google Domain 台灣尚未開放購買，未來應該會換去 Google Domain 。
-廠商 價格 WHOIS Privacy SSL Google Domain $361 免費 連結 Gandi $446 免費 連結 Godaddy $299 額外付費 ($293) 連結 中華電信 $720 未知 連結 name $270 首年免費，後續每年($150) 連結 美金匯率以 2020-02-19 13:35 : 30.16 做計算，上述列皆已轉換成新台幣價格。 </p>
-</section>
-<footer class=entry-footer><span title="2020-02-19 13:35:02 +0000 UTC">February 19, 2020</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to Domain 網址 網域 購買筆記" href=https://chzlab.net/2020/02/19/domain-%E7%B6%B2%E5%9D%80-%E7%B6%B2%E5%9F%9F-%E8%B3%BC%E8%B2%B7%E7%AD%86%E8%A8%98/></a>
-</article>
 <footer class=page-footer>
 <nav class=pagination>
 <a class=prev href=https://chzlab.net/posts/>« Prev Page</a>
+<a class=next href=https://chzlab.net/posts/page/3/>Next Page »</a>
 </nav>
 </footer>
 </main>
