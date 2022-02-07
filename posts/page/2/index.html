@@ -71,6 +71,24 @@
 </header>
 <article class=post-entry>
 <header class=entry-header>
+<h2>[2022-沒工作系列-01] Migrate Hexo to Hugo
+</h2>
+</header>
+<section class=entry-content>
+<p>原因 原本是用 Hexo ， 因會在 windows、 linux 下切換開發，有時 node 在 windows terminal 會有些詭異問題發生， 決定換成 golang 的 Hugo ，省的麻煩。
+windows 安裝 Hugo Hugo 官方文件
+可以使用在 win 上面的套件管理器 Chocolatey 或 Scoop ，差異似乎是在權限以及相依性，有點不太一樣，沒有細看。 有興趣可以參考
+Scoop or Chocolatey? Which Windows 10 package manager should you use?
+後來我選了 Scoop ，剛裝完可以用，當我把 terminal 關掉重開就又壞了……
+為了省事直接使用第三個方案，從 Hugo Github 直接裝執行檔來用，安裝位置就看個人習慣， 裝完記得在 path 裡面把路徑設定進去，因為在 win 的環境下習慣用 git bash ，所以我是這樣設定。
+# .bashrc PATH=$PATH:/c/work/tools/ 如果要用 win 內建的話，就直接在環境變數 path 裡面加。
+最後 terminal 下輸入 hugo ，正常執行。...</p>
+</section>
+<footer class=entry-footer><span title="2022-01-29 17:23:58 +0800 +0800">January 29, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to [2022-沒工作系列-01] Migrate Hexo to Hugo" href=https://chzlab.net/2022/01/29/2022-%E6%B2%92%E5%B7%A5%E4%BD%9C%E7%B3%BB%E5%88%97-01-migrate-hexo-to-hugo/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>Hexo 部屬至　GitHub Page
 </h2>
 </header>
@@ -123,21 +141,6 @@ git push origin source 建立 .github/workflows/pages.yml .github/workflows/page
 </section>
 <footer class=entry-footer><span title="2020-02-28 19:09:58 +0000 UTC">February 28, 2020</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to 正規表達式-基本概念" href=https://chzlab.net/2020/02/28/%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E5%BC%8F-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>Mac安裝Composer
-</h2>
-</header>
-<section class=entry-content>
-<p>基本前提為環境需要有 PHP ，
-後續按照 Composer 安裝教學 步驟做。
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" php -r "if (hash_file('sha384', 'composer-setup.php') === 'e0012edf3e80b6978849f5eff0d4b4e4c79ff1609dd1e613307e16318854d24ae64f26d17af3ef0bf7cfb710ca74755a') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;" php composer-setup.php php -r "unlink('composer-setup.php');" 此時在執行指令的位置，會出現以下檔案
-composer.phar 測試執行 composer.phar
-composer.phar // 顯示 ______ / ____/___ ____ ___ ____ ____ ________ _____ / / / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/ / /___/ /_/ / / / / / / /_/ / /_/ (__ ) __/ / \____/\____/_/ /_/ /_/ ....</p>
-</section>
-<footer class=entry-footer><span title="2020-02-22 23:48:39 +0000 UTC">February 22, 2020</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to Mac安裝Composer" href=https://chzlab.net/2020/02/22/mac%E5%AE%89%E8%A3%9Dcomposer/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>

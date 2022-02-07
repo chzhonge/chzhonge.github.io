@@ -9,7 +9,16 @@
       <link>https://chzlab.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 05 Feb 2022 12:28:10 +0800</lastBuildDate><atom:link href="https://chzlab.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Feb 2022 13:15:48 +0800</lastBuildDate><atom:link href="https://chzlab.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>github</title>
+      <link>https://chzlab.net/tags/github/</link>
+      <pubDate>Mon, 07 Feb 2022 13:15:48 +0800</pubDate>
+      
+      <guid>https://chzlab.net/tags/github/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>wip</title>
       <link>https://chzlab.net/tags/wip/</link>
@@ -142,15 +151,6 @@
       <pubDate>Sat, 29 Jan 2022 17:23:58 +0800</pubDate>
       
       <guid>https://chzlab.net/tags/hexo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>github</title>
-      <link>https://chzlab.net/tags/github/</link>
-      <pubDate>Sat, 13 Mar 2021 21:23:07 +0000</pubDate>
-      
-      <guid>https://chzlab.net/tags/github/</guid>
       <description></description>
     </item>
     
