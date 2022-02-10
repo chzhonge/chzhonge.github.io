@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>test on 德瑞克的實驗室</title>
+    <link>https://chzlab.net/tags/test/</link>
+    <description>Recent content in test on 德瑞克的實驗室</description>
+    <image>
+      <url>https://chzlab.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://chzlab.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 10 Feb 2022 22:28:47 +0800</lastBuildDate><atom:link href="https://chzlab.net/tags/test/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gorm Sqlite 測試相關問題</title>
+      <link>https://chzlab.net/2022/02/10/gorm-sqlite-%E6%B8%AC%E8%A9%A6%E7%9B%B8%E9%97%9C%E5%95%8F%E9%A1%8C/</link>
+      <pubDate>Thu, 10 Feb 2022 22:28:47 +0800</pubDate>
+      
+      <guid>https://chzlab.net/2022/02/10/gorm-sqlite-%E6%B8%AC%E8%A9%A6%E7%9B%B8%E9%97%9C%E5%95%8F%E9%A1%8C/</guid>
+      <description>failed to initialize database 原因 golang + gorm 搭配 sqlite 練習測試的時候發現， 把 db 用 go-sqlmock 的替換掉後，在跑測試時會噴
+failed to initialize database, got error all expectations were already fulfilled, call to Query &#39;select sqlite_version()&#39; mysql 解法 如果 db 是用 mysql 的話，只要這樣設定
+gDB, err := gorm.Open(mysql.New(mysql.Config{ Conn: DB, SkipInitializeWithVersion: true, }), &amp;amp;gorm.Config{}) 細節可以參考 source code
+sqlite 暫解 不過在 sqlite 上面看 code 是沒有開這個參數 source code
+因為只是練習，所以我這邊先直接寫一個新的 MockDialector 把它掛進來， 然後把 sqlite.Dialector() 複製過來後把 version 不需要的地方拿掉。
+實際上應該把相關的 code 都看過，確認是不是有必要開這個參數出來，然後發個 issue ， 如果沒問題 pr 做出來之類的？</description>
+    </item>
+    
+  </channel>
+</rss>

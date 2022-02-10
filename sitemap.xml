@@ -2,19 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://chzlab.net/tags/golang/</loc>
+    <lastmod>2022-02-10T22:28:47+08:00</lastmod>
+  </url><url>
+    <loc>https://chzlab.net/tags/gorm/</loc>
+    <lastmod>2022-02-10T22:28:47+08:00</lastmod>
+  </url><url>
+    <loc>https://chzlab.net/2022/02/10/gorm-sqlite-%E6%B8%AC%E8%A9%A6%E7%9B%B8%E9%97%9C%E5%95%8F%E9%A1%8C/</loc>
+    <lastmod>2022-02-10T22:28:47+08:00</lastmod>
+  </url><url>
+    <loc>https://chzlab.net/tags/mock/</loc>
+    <lastmod>2022-02-10T22:28:47+08:00</lastmod>
+  </url><url>
+    <loc>https://chzlab.net/posts/</loc>
+    <lastmod>2022-02-10T22:28:47+08:00</lastmod>
+  </url><url>
+    <loc>https://chzlab.net/tags/sqlite/</loc>
+    <lastmod>2022-02-10T22:28:47+08:00</lastmod>
+  </url><url>
+    <loc>https://chzlab.net/tags/</loc>
+    <lastmod>2022-02-10T22:28:47+08:00</lastmod>
+  </url><url>
+    <loc>https://chzlab.net/tags/test/</loc>
+    <lastmod>2022-02-10T22:28:47+08:00</lastmod>
+  </url><url>
+    <loc>https://chzlab.net/</loc>
+    <lastmod>2022-02-10T22:28:47+08:00</lastmod>
+  </url><url>
     <loc>https://chzlab.net/tags/github/</loc>
     <lastmod>2022-02-07T13:15:48+08:00</lastmod>
   </url><url>
     <loc>https://chzlab.net/2022/02/07/github-%E6%9C%AA%E4%BE%86%E5%B0%87%E6%94%AF%E6%8F%B4%E9%A1%AF%E7%A4%BA-mermaid-%E5%9C%96%E8%A1%A8/</loc>
-    <lastmod>2022-02-07T13:15:48+08:00</lastmod>
-  </url><url>
-    <loc>https://chzlab.net/posts/</loc>
-    <lastmod>2022-02-07T13:15:48+08:00</lastmod>
-  </url><url>
-    <loc>https://chzlab.net/tags/</loc>
-    <lastmod>2022-02-07T13:15:48+08:00</lastmod>
-  </url><url>
-    <loc>https://chzlab.net/</loc>
     <lastmod>2022-02-07T13:15:48+08:00</lastmod>
   </url><url>
     <loc>https://chzlab.net/tags/wip/</loc>
@@ -45,9 +63,6 @@
     <lastmod>2022-01-30T23:23:41+08:00</lastmod>
   </url><url>
     <loc>https://chzlab.net/tags/disqus/</loc>
-    <lastmod>2022-01-30T23:23:41+08:00</lastmod>
-  </url><url>
-    <loc>https://chzlab.net/tags/golang/</loc>
     <lastmod>2022-01-30T23:23:41+08:00</lastmod>
   </url><url>
     <loc>https://chzlab.net/tags/hugo/</loc>

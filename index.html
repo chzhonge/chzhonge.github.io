@@ -82,6 +82,22 @@
 </article>
 <article class=post-entry>
 <header class=entry-header>
+<h2>Gorm Sqlite 測試相關問題
+</h2>
+</header>
+<section class=entry-content>
+<p>failed to initialize database 原因 golang + gorm 搭配 sqlite 練習測試的時候發現， 把 db 用 go-sqlmock 的替換掉後，在跑測試時會噴
+failed to initialize database, got error all expectations were already fulfilled, call to Query 'select sqlite_version()' mysql 解法 如果 db 是用 mysql 的話，只要這樣設定
+gDB, err := gorm.Open(mysql.New(mysql.Config{ Conn: DB, SkipInitializeWithVersion: true, }), &gorm.Config{}) 細節可以參考 source code
+sqlite 暫解 不過在 sqlite 上面看 code 是沒有開這個參數 source code
+因為只是練習，所以我這邊先直接寫一個新的 MockDialector 把它掛進來， 然後把 sqlite.Dialector() 複製過來後把 version 不需要的地方拿掉。
+實際上應該把相關的 code 都看過，確認是不是有必要開這個參數出來，然後發個 issue ， 如果沒問題 pr 做出來之類的？...</p>
+</section>
+<footer class=entry-footer><span title="2022-02-10 22:28:47 +0800 +0800">February 10, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to Gorm Sqlite 測試相關問題" href=https://chzlab.net/2022/02/10/gorm-sqlite-%E6%B8%AC%E8%A9%A6%E7%9B%B8%E9%97%9C%E5%95%8F%E9%A1%8C/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>Github 未來將支援顯示 Mermaid 圖表
 </h2>
 </header>
@@ -135,18 +151,6 @@ navigator.clipboard.writeText(GM_getValue('xxxx')) .then(() => { console.log("Co
 </section>
 <footer class=entry-footer><span title="2022-01-30 23:23:41 +0800 +0800">January 30, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to [2022-沒工作系列-03] Hugo PaperMod 主題安裝 Disqus" href=https://chzlab.net/2022/01/30/2022-%E6%B2%92%E5%B7%A5%E4%BD%9C%E7%B3%BB%E5%88%97-03-hugo-papermod-%E4%B8%BB%E9%A1%8C%E5%AE%89%E8%A3%9D-disqus/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>[2022-沒工作系列-02] Golang Command 入門
-</h2>
-</header>
-<section class=entry-content>
-<p>基本用法 目前練習先使用 flag package
-func init() { flag.StringVar(&sourceFolder, "s", "", "source folder path [required]") // 設定要吃的參數，使用有帶 Var func 會把值存到 第一個參數中 // output -s [path] flag.Usage = usage // 執行沒帶參數 或帶 --help / -h 會顯示的提示訊息 } func usage() { fmt.Fprintln(os.Stderr, "Usage: parse [options]") flag.PrintDefaults() // 透過 flag 設定的參數說明都印出來 } 參考文件 Can command line flags in Go be set to mandatory? Go by Example: Command-Line Subcommands Golang 官方文件 flag 【Golang】如何讀取 command-line argument/flag？必知的幾種用法！ 其他套件 go-flags cobra </p>
-</section>
-<footer class=entry-footer><span title="2022-01-30 21:10:37 +0800 +0800">January 30, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to [2022-沒工作系列-02] Golang Command 入門" href=https://chzlab.net/2022/01/30/2022-%E6%B2%92%E5%B7%A5%E4%BD%9C%E7%B3%BB%E5%88%97-02-golang-command-%E5%85%A5%E9%96%80/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>
