@@ -114,9 +114,22 @@ IS NULL ORDER BY `users`.`id` LIMIT 1" with expected regexp "SELECT `id` FROM `u
 
 明明看起來沒問題，google 發現要用 regexp.QuoteMeta 來處理反斜線，加了就正常了。
 
+## gorm insert mock  非手動設定值
+有些欄位資料是透過 gorm 或是在 db 自行建立的，例如： created_at
+這時候可以透過 sqlmock.AnyArg() [2] 作為測試的參數
+
+
+## 使用 Suite
+
+### 透過 SetupTest() 處理測試環境重置
+維持測試的獨立性，可以透過在 SetupTest() 設定每次測試的初始化，
+這個 method 會在每個測試前執行。[3]
+
 
 ## 參考文件
-[sqlmock-is-not-matching-query-but-query-is-identical-and-log-output-shows-the-s](https://stackoverflow.com/questions/59652031/sqlmock-is-not-matching-query-but-query-is-identical-and-log-output-shows-the-s)
+- [sqlmock-is-not-matching-query-but-query-is-identical-and-log-output-shows-the-s](https://stackoverflow.com/questions/59652031/sqlmock-is-not-matching-query-but-query-is-identical-and-log-output-shows-the-s)
+- [[2]INSERT while mocking gorm](https://github.com/DATA-DOG/go-sqlmock/issues/118#issuecomment-614573409)
+- [[3]官方 suite 說明](https://pkg.go.dev/github.com/stretchr/testify/suite?utm_source=godoc#SetupTestSuite)
 
 
 
