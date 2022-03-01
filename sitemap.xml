@@ -2,8 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://chzlab.net/tags/gin/</loc>
+    <lastmod>2022-03-01T15:12:29+08:00</lastmod>
+  </url><url>
+    <loc>https://chzlab.net/2022/03/01/gin-http-request-test-%E7%AD%86%E8%A8%98/</loc>
+    <lastmod>2022-03-01T15:12:29+08:00</lastmod>
+  </url><url>
     <loc>https://chzlab.net/tags/golang/</loc>
-    <lastmod>2022-02-10T22:28:47+08:00</lastmod>
+    <lastmod>2022-03-01T15:12:29+08:00</lastmod>
+  </url><url>
+    <loc>https://chzlab.net/posts/</loc>
+    <lastmod>2022-03-01T15:12:29+08:00</lastmod>
+  </url><url>
+    <loc>https://chzlab.net/tags/</loc>
+    <lastmod>2022-03-01T15:12:29+08:00</lastmod>
+  </url><url>
+    <loc>https://chzlab.net/tags/test/</loc>
+    <lastmod>2022-03-01T15:12:29+08:00</lastmod>
+  </url><url>
+    <loc>https://chzlab.net/</loc>
+    <lastmod>2022-03-01T15:12:29+08:00</lastmod>
   </url><url>
     <loc>https://chzlab.net/tags/gorm/</loc>
     <lastmod>2022-02-10T22:28:47+08:00</lastmod>
@@ -14,19 +32,7 @@
     <loc>https://chzlab.net/tags/mock/</loc>
     <lastmod>2022-02-10T22:28:47+08:00</lastmod>
   </url><url>
-    <loc>https://chzlab.net/posts/</loc>
-    <lastmod>2022-02-10T22:28:47+08:00</lastmod>
-  </url><url>
     <loc>https://chzlab.net/tags/sqlite/</loc>
-    <lastmod>2022-02-10T22:28:47+08:00</lastmod>
-  </url><url>
-    <loc>https://chzlab.net/tags/</loc>
-    <lastmod>2022-02-10T22:28:47+08:00</lastmod>
-  </url><url>
-    <loc>https://chzlab.net/tags/test/</loc>
-    <lastmod>2022-02-10T22:28:47+08:00</lastmod>
-  </url><url>
-    <loc>https://chzlab.net/</loc>
     <lastmod>2022-02-10T22:28:47+08:00</lastmod>
   </url><url>
     <loc>https://chzlab.net/tags/github/</loc>

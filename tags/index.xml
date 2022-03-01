@@ -9,13 +9,31 @@
       <link>https://chzlab.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 10 Feb 2022 22:28:47 +0800</lastBuildDate><atom:link href="https://chzlab.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Mar 2022 15:12:29 +0800</lastBuildDate><atom:link href="https://chzlab.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>gin</title>
+      <link>https://chzlab.net/tags/gin/</link>
+      <pubDate>Tue, 01 Mar 2022 15:12:29 +0800</pubDate>
+      
+      <guid>https://chzlab.net/tags/gin/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Golang</title>
       <link>https://chzlab.net/tags/golang/</link>
-      <pubDate>Thu, 10 Feb 2022 22:28:47 +0800</pubDate>
+      <pubDate>Tue, 01 Mar 2022 15:12:29 +0800</pubDate>
       
       <guid>https://chzlab.net/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>test</title>
+      <link>https://chzlab.net/tags/test/</link>
+      <pubDate>Tue, 01 Mar 2022 15:12:29 +0800</pubDate>
+      
+      <guid>https://chzlab.net/tags/test/</guid>
       <description></description>
     </item>
     
@@ -43,15 +61,6 @@
       <pubDate>Thu, 10 Feb 2022 22:28:47 +0800</pubDate>
       
       <guid>https://chzlab.net/tags/sqlite/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>test</title>
-      <link>https://chzlab.net/tags/test/</link>
-      <pubDate>Thu, 10 Feb 2022 22:28:47 +0800</pubDate>
-      
-      <guid>https://chzlab.net/tags/test/</guid>
       <description></description>
     </item>
     
