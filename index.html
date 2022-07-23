@@ -82,6 +82,19 @@
 </article>
 <article class=post-entry>
 <header class=entry-header>
+<h2>JMeter 情境筆記
+</h2>
+</header>
+<section class=entry-content>
+<p>記錄自己常用的 JMeter 設定情境
+常用元件 Test Plan 設定變數 (可以 call java func) 若希望一個做完 Thread Group 才做下一個 Thread Group 可以勾選 (Run Thread Groups consecutively) Thread Group 需要多少個 User (thread) 每個 thread 持續時間， Ramp-up 時間，用於模擬 User 逐漸上升的狀況 設定執行次數 (Loop Controller 也可以達成相同的效果) 例： 每個 User 持續 20 秒，並在 5 秒達到總共 10 個 User， 因 Loop Count 設定 infinite 時，就是看 User 的持續時間， 這邊就是跑 20 秒，不管次數了，若有設定 count 就是跑幾次結束。
+Loop Controller 設定次數 Transaction Controller 用於需要依序步驟的處理，常見案例：登入拿 token ，根據取得 token 呼叫下一支 API 如果啟用 Generate parent sample ，報表顯示上會將同一個 Transaction group by 一起，比較好閱讀 HTTP Request 常搭配 HTTP Header Manager JSON Extractor 放在 Http Requset 之後或裡面，把 JSON Response 需要的值轉成變數在後面使用 View Results Tree 報表，可以細看每次的 req/res 結果 根據放的區塊不同，記錄的範圍不一樣 例：你呼叫兩隻 API，若你想分開看，就在各自的 HTTP Request 裡面新增，這樣就會有獨立的紀錄。大多數的元件邏輯都相同。 Aggregate Report、Summary Report 常看的欄位 P90：90% User 的位於的 Response 區間 Throughput：rps (Request per Second) 每秒的承載量，若表示該 API 能承受的請求量，越高越好。 Error Summary Report 我會放在最外層，這樣可以大概看一下，多個 testcase 跑完，整體的狀況 Graph Results、Aggregate Graph 可以用來協助確認在哪個時間點，API 速率有明顯變化 Assertion 檢查用，確認回傳是否符合預期 情境 想要知道 API 在 10 個 user 下 qps 的狀況 設定如下 - Thread Group - Http Request - View Result Tree - Aggregate Report 看 Report 中 P90 、Error、Throughput...</p>
+</section>
+<footer class=entry-footer><span title="2022-07-22 19:48:39 +0000 UTC">July 22, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to JMeter 情境筆記" href=https://chzlab.net/2022/07/22/jmeter-%E6%83%85%E5%A2%83%E7%AD%86%E8%A8%98/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>Gin http request test 筆記
 </h2>
 </header>
@@ -138,23 +151,6 @@ sqlite 暫解 不過在 sqlite 上面看 code 是沒有開這個參數 source co
 </section>
 <footer class=entry-footer><span title="2022-02-05 12:28:10 +0800 +0800">February 5, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to 資料密集型應用系統設計 (1)" href=https://chzlab.net/2022/02/05/%E8%B3%87%E6%96%99%E5%AF%86%E9%9B%86%E5%9E%8B%E6%87%89%E7%94%A8%E7%B3%BB%E7%B5%B1%E8%A8%AD%E8%A8%88-1/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>[2022-沒工作系列-04] Tampermonkey 筆記
-</h2>
-</header>
-<section class=entry-content>
-<p>需求 之前寫 Tampermonkey 的腳本，有些部分，一直沒時間優化，分別為：
-自動複製檔名到 clipboard 下載檔案時自動命名 跨 script 取用變數 現在有空檔，來研究一下。
-自動複製檔名到 clipboard 忘記之前踩到什麼問題，這次直接用 Clipboard API 就達到效果了。 writeText 可以直接帶 string 。
-navigator.clipboard.writeText(GM_getValue('xxxx')) .then(() => { console.log("Copied to clipboard successfully!"); }) // 略 參考文件 https://w3c.github.io/clipboard-apis/#dom-clipboard-write https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API 下載檔案時自動命名 如果是針對 a 元素，可以直接增加 download attribute，使他調整下載的檔名， 但是如果 server 有特別回 content-disposition header 會以 server 為準，所以就不會有作用。
-還有一個作法是利用 axios get 檔案後，重新塞到新連結後，再來下載就不會前面提到的問題， 不過因為我要操作的檔案不小，不適合這種作法。
-所以現階段現自動設定到 clipboard ，手動貼上改檔名。
-參考文件 Javascript rename file on download Javascript: set filename to be downloaded 跨 script 取用變數 用法很簡單，在 Tampermonkey 腳本增加下列兩行...</p>
-</section>
-<footer class=entry-footer><span title="2022-02-04 19:24:53 +0800 +0800">February 4, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to [2022-沒工作系列-04] Tampermonkey 筆記" href=https://chzlab.net/2022/02/04/2022-%E6%B2%92%E5%B7%A5%E4%BD%9C%E7%B3%BB%E5%88%97-04-tampermonkey-%E7%AD%86%E8%A8%98/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>
