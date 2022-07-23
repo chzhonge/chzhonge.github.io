@@ -1,0 +1,100 @@
+---
+title: JMeter 情境筆記
+date: 2022-07-22 19:48:39
+tags:
+    - Jmeter
+    - 測試工具
+    - 筆記
+---
+
+記錄自己常用的 JMeter 設定情境
+
+## 常用元件
+
+### Test Plan
+- 設定變數 (可以 call java func)
+- 若希望一個做完 Thread Group 才做下一個 Thread Group 可以勾選 (Run Thread Groups consecutively)
+
+![](/img/jmeter-node/test-plan.png)
+
+### Thread Group
+- 需要多少個 User (thread) 
+- 每個 thread 持續時間，
+- Ramp-up 時間，用於模擬 User 逐漸上升的狀況
+- 設定執行次數 (Loop Controller 也可以達成相同的效果)
+
+例： 
+每個 User 持續 20 秒，並在 5 秒達到總共 10 個 User，
+因 Loop Count 設定 infinite 時，就是看 User 的持續時間，
+這邊就是跑 20 秒，不管次數了，若有設定 count 就是跑幾次結束。
+
+![](/img/jmeter-node/thread-group.png)
+
+### Loop Controller
+- 設定次數
+
+### Transaction Controller
+- 用於需要依序步驟的處理，常見案例：登入拿 token ，根據取得 token 呼叫下一支 API
+- 如果啟用 Generate parent sample ，報表顯示上會將同一個 Transaction group by 一起，比較好閱讀
+
+### HTTP Request
+- 常搭配 HTTP Header Manager
+
+### JSON Extractor
+- 放在 Http Requset 之後或裡面，把 JSON Response 需要的值轉成變數在後面使用
+
+![](/img/jmeter-node/json-extractor.png)
+
+### View Results Tree
+- 報表，可以細看每次的 req/res 結果
+- 根據放的區塊不同，記錄的範圍不一樣
+- 例：你呼叫兩隻 API，若你想分開看，就在各自的 HTTP Request 裡面新增，這樣就會有獨立的紀錄。大多數的元件邏輯都相同。
+
+### Aggregate Report、Summary Report
+- 常看的欄位
+- P90：90% User 的位於的 Response 區間
+- Throughput：rps (Request per Second) 每秒的承載量，若表示該 API 能承受的請求量，越高越好。
+- Error
+
+### Summary Report
+- 我會放在最外層，這樣可以大概看一下，多個 testcase 跑完，整體的狀況
+
+### Graph Results、Aggregate Graph
+- 可以用來協助確認在哪個時間點，API 速率有明顯變化
+
+### Assertion
+- 檢查用，確認回傳是否符合預期
+
+## 情境
+
+### 想要知道 API 在 10 個 user 下 qps 的狀況
+
+設定如下
+![](/img/jmeter-node/api-sample-1.png)
+
+```
+- Thread Group
+    - Http Request
+    - View Result Tree
+    - Aggregate Report
+
+```
+看 Report 中 P90 、Error、Throughput 
+
+
+### 先登入拿 token 後，呼叫另外一支 API
+
+```
+- Thread Group
+    - Transaction Controller
+        - Http Request
+            - JSON Extractor
+        - Http Request
+            - HTTP Header Manager
+            - JSON Assertion
+            - View Result Tree (1)
+        - View Result Tree (2)
+```
+
+看 View Result Tree (1) 有沒有都 pass，若異常這邊會有 fail 在 (2) 也會看到 fail ，
+拆成兩個在確認錯誤會比較方便。
